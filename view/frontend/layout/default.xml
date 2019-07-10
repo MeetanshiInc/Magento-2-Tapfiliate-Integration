@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <script src="https://script.tapfiliate.com/tapfiliate.js" type="text/javascript" async="async" src_type="url"/>
+    </head>
+    <body>
+        <referenceContainer name="before.body.end">
+            <block class="Meetanshi\TapFiliate\Block\Success" template="Meetanshi_TapFiliate::before.phtml" name="meetanshi-tapfiliate-body"/>
+        </referenceContainer>
+    </body>
+</page>

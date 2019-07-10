@@ -1,0 +1,17 @@
+<?php
+$tapFiliateData = $block->getOrderData();
+?>
+<?php if ( $tapFiliateData != false): ?>
+
+    <script type="text/javascript">
+        (function (t, a, p) {
+            t.TapfiliateObject = a;
+            t[a] = t[a] || function () {
+                (t[a].q = t[a].q || []).push(arguments)
+            }
+        })(window, 'tap');
+
+        tap('create', '<?php echo $tapFiliateData['account'] ?>');
+        tap('conversion', '<?php echo $tapFiliateData['order'] ?>', <?php echo number_format($tapFiliateData['amount'],2) ?>);
+    </script>
+<?php endif; ?>
