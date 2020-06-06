@@ -11,6 +11,7 @@ $tapFiliateData = $block->getAccountData();
             }
         })(window, 'tap');
 
-        tap('create', '<?php echo $tapFiliateData['account'] ?>');
+        tap('create', '<?php echo $tapFiliateData['account'] ?>', { integration: "magento" });
+        tap('detect');
     </script>
 <?php endif; ?>
