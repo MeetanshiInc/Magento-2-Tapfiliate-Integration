@@ -11,7 +11,7 @@ $tapFiliateData = $block->getOrderData();
             }
         })(window, 'tap');
 
-        tap('create', '<?php echo $tapFiliateData['account'] ?>');
+        tap('create', '<?php echo $tapFiliateData['account'] ?>',{ integration: "magento" });
         tap('conversion', '<?php echo $tapFiliateData['order'] ?>', <?php echo number_format($tapFiliateData['amount'],2) ?>);
     </script>
 <?php endif; ?>
